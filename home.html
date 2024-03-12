@@ -35,27 +35,21 @@
     <!-- home section starts -->
     <div class="home-container">
       <section class="home">
-        <form action="" method="post">
+        <form class="search-job">
           <h3>find your next job</h3>
-          <p>job title <span>*</span></p>
+          <p>Search job<span>*</span></p>
           <input
             type="text"
-            name="title"
-            placeholder="keyword, category or company"
-            required
+            name="search"
+            placeholder="Search..."
             maxlength="20"
             class="input"
+            autocomplete="off"
           />
-          <p>job location</p>
-          <input
-            type="text"
-            name="location"
-            placeholder="city, state or country"
-            required
-            maxlength="50"
-            class="input"
-          />
-          <input type="submit" value="search job" name="search" class="btn" />
+          <input type="submit" value="search job" class="btn" />
+          <div>
+            <ul style="list-style-type: none" class="search-job-list"></ul>
+          </div>
         </form>
       </section>
     </div>
