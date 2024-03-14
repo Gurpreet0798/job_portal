@@ -71,28 +71,6 @@ const jobData = [
   });
 });
 
-[...document.querySelectorAll(".search-job")].forEach((form) => {
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const search = e.target.search.value.toLowerCase();
-    const jobs = jobData.filter(
-      (job) =>
-        job.title.toLowerCase().indexOf(search) > -1 ||
-        job.company.toLowerCase().indexOf(search) > -1 ||
-        job.location.toLowerCase().indexOf(search) > -1
-    );
-    [...document.querySelectorAll(".search-job-list")].forEach((ul) => {
-      //   ul.style.backgroundColor = jobs.length > 0 ? "white" : "transparent";
-      if (search) {
-        ul.innerHTML = jobs
-          .map((job) => `<li style="margin: 1rem;">${job.title}</li>`)
-          .join("\n");
-      } else {
-        ul.innerHTML = null;
-      }
-    });
-  });
-});
 
 document.querySelector("#menu-btn").onclick = () => {
   navbar.classList.toggle("active");
